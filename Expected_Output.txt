@@ -1,0 +1,175 @@
+Checking IP's
+
+Creating SSH Key
+
+Generating public/private rsa key pair.
+
+Your identification has been saved in /root/.ssh/id_rsa.
+
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+
+The key fingerprint is:
+
+SHA256:GXpUFKiZrDPlNMeh6mnfBCSk4h/JeaWwSnPTUcQVWxA root@localhost.localdomain
+
+The key's randomart image is:
+
++---[RSA 2048]----+
+
+|    . oo.EBo     |
+
+|   o  ..o.o      |
+
+|. ...o.Boo       |
+
+|... *o&ooo       |
+
+| + O XooS        |
+
+|. = O .o         |
+
+| . o +  .        |
+
+|    +  o         |
+
+|   . .. .        |
+
++----[SHA256]-----+
+
+
+Copying SSH keys
+
+
+Statying Ansible Playbook
+
+
+PLAY [mynodes] *****************************************************************
+
+
+
+TASK [Install Python 3] ********************************************************
+
+changed: [192.168.1.22]
+
+changed: [192.168.1.23]
+
+changed: [192.168.1.20]
+
+changed: [192.168.1.21]
+
+
+
+TASK [Install/Update Apache] ***************************************************
+
+ok: [192.168.1.23]
+
+ok: [192.168.1.22]
+
+ok: [192.168.1.21]
+
+ok: [192.168.1.20]
+
+
+
+TASK [Copy in index.html] ******************************************************
+
+changed: [192.168.1.23]
+
+changed: [192.168.1.22]
+
+changed: [192.168.1.20]
+
+changed: [192.168.1.21]
+
+
+
+TASK [Fire up Apache] **********************************************************
+
+ok: [192.168.1.23]
+
+ok: [192.168.1.22]
+
+ok: [192.168.1.20]
+
+ok: [192.168.1.21]
+
+
+
+RUNNING HANDLER [restart apache] ***********************************************
+
+changed: [192.168.1.23]
+
+changed: [192.168.1.22]
+
+changed: [192.168.1.20]
+
+changed: [192.168.1.21]
+
+
+
+PLAY RECAP *********************************************************************
+
+192.168.1.20               : ok=5    changed=3    unreachable=0    failed=0   
+
+192.168.1.21               : ok=5    changed=3    unreachable=0    failed=0   
+
+192.168.1.22               : ok=5    changed=3    unreachable=0    failed=0   
+
+192.168.1.23               : ok=5    changed=3    unreachable=0    failed=0   
+
+
+
+
+
+Getting Http Response From 192.168.1.20
+
+<html>
+    <head>
+        <title>CS-312 HW7 Ansible</title>
+    </head>
+    <body>
+        <p>CS-312 HW7 Ansible</p>
+        <p>Created: 2019-05-22 23:12:22.568581</p>
+    </body>
+</html>
+
+
+
+Getting Http Response From 192.168.1.21
+<html>
+    <head>
+        <title>CS-312 HW7 Ansible</title>
+    </head>
+    <body>
+        <p>CS-312 HW7 Ansible</p>
+        <p>Created: 2019-05-22 23:12:22.607744</p>
+    </body>
+</html>
+
+
+
+Getting Http Response From 192.168.1.22
+<html>
+    <head>
+        <title>CS-312 HW7 Ansible</title>
+    </head>
+    <body>
+        <p>CS-312 HW7 Ansible</p>
+        <p>Created: 2019-05-22 23:12:22.676600</p>
+    </body>
+</html>
+
+
+
+Getting Http Response From 192.168.1.23
+<html>
+    <head>
+        <title>CS-312 HW7 Ansible</title>
+    </head>
+    <body>
+        <p>CS-312 HW7 Ansible</p>
+        <p>Created: 019-05-22 23:12:22.659349</p>
+    </body>
+</html>
+
+
