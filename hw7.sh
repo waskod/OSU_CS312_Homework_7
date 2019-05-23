@@ -4,7 +4,7 @@ PASS="password"
 echo -e "\nChecking IP's\n"
 for i in {20..23}; do
 	UP=$(ping -c 1 -W 2 192.168.1.${i})
-	if [$? -ne 0]; then
+	if [ $? -ne 0 ]; then
 		echo -e "Can't Connect To: 192.168.1.${i}"
 		exit 1
 	fi
